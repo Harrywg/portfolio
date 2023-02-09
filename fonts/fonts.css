@@ -1,0 +1,14 @@
+@font-face {
+    font-family: monomaniac-one;
+    src: url('./monomaniac-one-regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: kumbh-sans;
+    src: url('./KumbhSans-Black.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: nunito-sans;
+    src: url('./Nunito-Sans/NunitoSans-Regular.ttf') format('truetype');
+}

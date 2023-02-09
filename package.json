@@ -1,0 +1,7 @@
+{
+  "dependencies": {
+    "gsap": "^3.11.4",
+    "jquery": "^3.6.3",
+    "matter-js": "^0.18.0"
+  }
+}

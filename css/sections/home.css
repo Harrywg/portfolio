@@ -1,0 +1,201 @@
+#home {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+#home_header-wrap {
+    padding: 5rem 2rem;
+    background: var(--green);
+    min-width: min(60%, 50rem);
+    clip-path: url(#blob);
+
+    text-align: center;
+}
+
+@media(max-width: 400px) {
+    #home_header-wrap {
+        padding: 5rem 1rem;
+        margin: 0;
+    }
+}
+
+@media(max-width: 1250px) {
+    #home_header-wrap {
+        width: 100%;
+    }
+}
+
+#home_header-top {
+    color: var(--light-blue);
+    font-size: 2rem;
+    font-weight: 100;
+    font-size: calc(1.3rem + (2vw+2vh)/2);
+
+}
+
+#home_header-bottom {
+
+    color: var(--light-blue);
+    font-weight: 100;
+    font-size: calc(1.3rem + (2vw+2vh)/2);
+
+}
+
+#home_header-wrap p {
+    margin-top: 0.5rem;
+    font-family: nunito-sans;
+    /* color: var(--light-blue); */
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 300;
+}
+
+#home_header-gradient {
+    /* gradient */
+    margin: 1rem 0;
+    background: linear-gradient(87.79deg, var(--light-blue) 0%, var(--orange) 50%, var(--light-blue) 100%);
+    background-size: 1000px, 1000px;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-size: clamp(3.2rem, 9vw, 5rem);
+    animation: header-animation 40s infinite linear;
+}
+
+@media(max-width: 500px) {
+    #home_header-gradient {
+        font-size: 2.5rem;
+    }
+}
+
+@keyframes header-animation {
+    0% {
+        background-position-x: 0;
+    }
+
+    50% {
+        background-position-x: -1000px;
+    }
+
+    100% {
+        background-position-x: 0;
+    }
+}
+
+#home_sandbox-button {
+    background: url("../../images/icons/sandbox.png");
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    height: 3.5rem;
+    margin: 0 2rem;
+    aspect-ratio: 1/1;
+    background-size: contain;
+    border: 0;
+    outline: 0;
+
+    /* from https://codepen.io/sosuke/pen/Pjoqqp */
+    filter: invert(89%) sepia(27%) saturate(363%) hue-rotate(88deg) brightness(104%) contrast(101%) drop-shadow(5px 5px 10px var(--dark-green)) drop-shadow(5px 5px 10px var(--dark-green)) drop-shadow(5px 5px 10px var(--dark-green));
+    transition: transform 0.1s;
+
+}
+
+#home_sandbox-button:hover {
+
+    /* from https://codepen.io/sosuke/pen/Pjoqqp */
+    filter: invert(63%) sepia(57%) saturate(3917%) hue-rotate(360deg) brightness(101%) contrast(102%);
+    cursor: pointer;
+}
+
+#home_sandbox-button:active {
+    transform: translateY(-50%) scale(0.9);
+}
+
+#home_sidebar-wrap {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    padding: 0.8rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.5rem;
+    /* background: var(--green); */
+    filter: drop-shadow(5px 5px 10px var(--dark-green)) drop-shadow(5px 5px 10px var(--dark-green)) drop-shadow(5px 5px 10px var(--dark-green));
+}
+
+@media(max-width: 1250px) {
+    #home_sidebar-wrap {
+        display: none;
+    }
+
+    #home_sandbox-button {
+        display: none;
+    }
+}
+
+.section-link {
+    font-family: monomaniac-one;
+
+    color: var(--light-blue);
+    font-size: 1.8rem;
+    transition: color 0.1s;
+    position: relative;
+    padding: 1rem 2rem;
+    transition: transform 0.1s;
+    user-select: none;
+
+}
+
+.section-link::after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 8.5%;
+    left: 100%;
+    height: 75%;
+    width: 3rem;
+
+    z-index: -1;
+    background: var(--orange);
+    clip-path: polygon(15% 0%, 50% 50%, 15% 100%, 0% 100%, 25% 50%, 0% 0%);
+
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.2s, left 0.2s, clip-path 0.1s;
+    transform: scale(0.8);
+}
+
+.section-link:hover {
+    cursor: pointer;
+    color: var(--orange);
+
+}
+
+.section-link:hover::after {
+    opacity: 1;
+    left: 115%;
+
+}
+
+.section-link:active::after {
+    opacity: 1;
+    left: 115%;
+    opacity: 1;
+    clip-path: polygon(20% 0%, 100% 50%, 20% 100%, 0% 100%, 25% 50%, 0% 0%);
+    clip-path: polygon(100% 0%, 75% 50%, 100% 100%, 25% 100%, 0% 50%, 25% 0%);
+
+    clip-path: polygon(15% 0%, 50% 50%, 15% 100%, 0% 100%, 25% 50%, 0% 0%);
+
+}
+
+.section-link:active {
+    cursor: pointer;
+    color: var(--orange);
+}
