@@ -33,16 +33,14 @@
     color: var(--light-blue);
     font-size: 2rem;
     font-weight: 100;
-    font-size: calc(1.3rem + (2vw + 2vh) / 2);
-
+    font-size: clamp(1.3rem, 5vw, 2.5rem)
 }
 
 #home_header-bottom {
 
     color: var(--light-blue);
     font-weight: 100;
-    font-size: calc(1.3rem + (2vw + 2vh) / 2);
-
+    font-size: clamp(1.3rem, 5vw, 2.5rem)
 }
 
 #home_header-wrap p {

@@ -29,7 +29,7 @@
 
 #home_header-top, #home_header-bottom {
   color: var(--light-blue);
-  font-size: calc(1.3rem + 1vw + 1vh);
+  font-size: clamp(1.3rem, 5vw, 2.5rem);
   font-weight: 100;
 }
 
