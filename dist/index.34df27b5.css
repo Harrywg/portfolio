@@ -1,0 +1,179 @@
+:root {
+  --green: #06252e;
+  --green-translucent: #06252e8e;
+  --dark-green: #061d24;
+  --dark-green-translucent: #061d24f5;
+  --light-blue: #bcffe3;
+  --light-blue-translucent: #bcffe3b7;
+  --orange: #ff8a00;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--dark-green);
+  margin: 0;
+  font-family: monomaniac-one;
+  overflow: hidden;
+}
+
+h1 {
+  margin: 0;
+  padding: 0;
+  font-size: 3rem;
+  font-weight: 400;
+}
+
+h2 {
+  font-family: kumbh-sans;
+  font-weight: 800;
+}
+
+#main {
+  scroll-behavior: smooth;
+  height: 100vh;
+  opacity: 1;
+  width: 100vw;
+  transition: opacity .5s;
+  overflow-y: scroll;
+}
+
+#page-wrap {
+  height: 100vh;
+  width: 100vw;
+  z-index: 0;
+  opacity: 1;
+  transition: opacity .5s;
+  position: relative;
+  overflow: hidden;
+}
+
+.ball {
+  width: 50px;
+  height: 50px;
+  border: 3px solid var(--light-blue);
+  pointer-events: none;
+  z-index: 100;
+  border-radius: 50%;
+  place-items: center;
+  transition: width .2s, height .2s;
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+}
+
+#ball-1 {
+  opacity: .8;
+}
+
+#ball-2 {
+  isolation: isolate;
+  opacity: .6;
+}
+
+#ball-3 {
+  isolation: isolate;
+  opacity: .4;
+}
+
+#ball-4 {
+  isolation: isolate;
+  opacity: .2;
+}
+
+#cursor {
+  pointer-events: none;
+  height: 16px;
+  width: 16px;
+  background: var(--light-blue);
+  clip-path: circle();
+  z-index: 100;
+  mix-blend-mode: difference;
+  transition: width .2s, height .2s, background-color .4s;
+  position: fixed;
+  top: -100%;
+  left: -100%;
+  transform: translate(-50%, -50%);
+}
+
+.ball-hover {
+  width: 90px;
+  height: 90px;
+}
+
+#physics-engine-wrap {
+  pointer-events: none;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+}
+
+.sandbox-mode {
+  opacity: 0 !important;
+}
+
+.sandbox-mode * {
+  pointer-events: none !important;
+}
+
+#sandbox-return-wrap {
+  height: 6rem;
+  width: 15rem;
+  background: var(--green);
+  pointer-events: all;
+  place-items: center;
+  transition: all .3s ease-in;
+  display: grid;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 100%);
+}
+
+#sandbox-return {
+  color: var(--light-blue);
+  background: none;
+  border: none;
+  outline: none;
+  font-family: monomaniac-one;
+  font-size: 1.5rem;
+  transition: all .1s;
+}
+
+#sandbox-return:hover {
+  color: var(--orange);
+  cursor: pointer;
+}
+
+#sandbox-return:active {
+  transform: scale(.9);
+}
+
+.sandbox-return-active {
+  transform: translate(-50%) !important;
+}
+
+#footer p {
+  text-align: center;
+  background: var(--green);
+  color: #fff;
+  padding: 1rem;
+  font-family: nunito-sans;
+}
+
+#footer a {
+  color: var(--light-blue);
+  font-weight: bold;
+}
+
+#footer a:hover {
+  color: var(--orange);
+  cursor: pointer;
+}
+
+/*# sourceMappingURL=index.34df27b5.css.map */
