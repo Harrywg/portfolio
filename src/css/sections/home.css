@@ -7,6 +7,14 @@
 
 }
 
+@media(max-width: 1000px) {
+    #home {
+        height: calc(100vh - 5rem);
+    }
+
+    #home_header-wrap {}
+}
+
 #home_header-wrap {
     padding: 5rem 2rem;
     background: var(--green);

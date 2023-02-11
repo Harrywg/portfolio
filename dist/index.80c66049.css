@@ -6,6 +6,12 @@
   position: relative;
 }
 
+@media (max-width: 1000px) {
+  #home {
+    height: calc(100vh - 5rem);
+  }
+}
+
 #home_header-wrap {
   background: var(--green);
   min-width: min(60%, 50rem);
