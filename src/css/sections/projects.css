@@ -9,6 +9,9 @@
     background: var(--green);
     overflow: hidden;
     transform: translateZ(0);
+    max-width: 90rem;
+    margin: auto;
+    margin-bottom: 4rem;
 }
 
 @media(max-width: 500px) {
@@ -180,7 +183,7 @@
     z-index: -1;
     transition: clip-path 2s;
     border-top: 3px solid var(--light-blue);
-    background: var(--dark-green);
+    background: var(--green);
 }
 
 
@@ -254,7 +257,11 @@
     justify-content: space-evenly;
     height: 100%;
     list-style-type: none;
+}
+
+.skills-list-heading {
     font-weight: bold;
+
 }
 
 .project_info-list {
@@ -287,14 +294,21 @@
 
 }
 
+.project_info-link {
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+}
+
 .links-card a {
-    width: 4rem;
-    height: 4rem;
-    background: var(--green);
+    width: 5rem;
+    height: 5rem;
+    background: var(--dark-green);
     padding: 1rem;
     border-radius: 50%;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    gap: 1rem;
     flex-direction: column;
     align-items: center;
 }
@@ -303,6 +317,8 @@
     color: var(--light-blue);
     text-align: center;
     text-decoration: none;
+    font-size: 0.9rem;
+    white-space: nowrap;
 }
 
 .links-card a:link {
@@ -340,7 +356,7 @@
     font-family: monomaniac-one;
     position: absolute;
     z-index: 100;
-    background: var(--green);
+    background: var(--dark-green);
     color: var(--light-blue);
     padding: 1rem 2rem;
     display: none;

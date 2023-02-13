@@ -3,7 +3,7 @@
     text-align: center;
     padding: 4rem 2rem;
     background: var(--green);
-
+    padding-bottom: 0;
 }
 
 #contact h2 {
@@ -49,6 +49,7 @@
     margin: auto;
     gap: 1rem;
     width: 100%;
+    position: relative;
 }
 
 #contact-form input {
@@ -83,7 +84,7 @@
     padding: 2rem;
     width: auto;
     color: var(--light-blue);
-    transition: color 0.1s;
+    transition: color 0.1s, transform 0.2s, opacity, 0.3s;
 
     font-size: 1.3rem;
     font-family: monomaniac-one;
@@ -93,4 +94,62 @@
 #form-submit-button:hover {
     cursor: pointer;
     color: var(--orange)
+}
+
+#form-success {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: calc(100% + 1rem);
+    background-color: var(--green);
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: var(--light-blue);
+    display: none;
+}
+
+#form-success p {
+    color: var(--light-blue);
+    font-size: 1.3rem;
+}
+
+#form-success button {
+    background: var(--dark-green);
+    border: 0;
+    outline: 0;
+    padding: 2rem;
+    width: auto;
+    color: var(--light-blue);
+    transition: color 0.1s, transform 0.2s, opacity, 0.3s;
+
+    font-size: 1.3rem;
+    font-family: monomaniac-one;
+    padding: 1rem 2rem;
+}
+
+#form-success button:hover {
+    cursor: pointer;
+    color: var(--orange)
+}
+
+#footer p {
+    text-align: center;
+    font-family: nunito-sans;
+    padding: 1rem;
+    color: white;
+    margin: 0;
+    margin-top: 2rem;
+    font-size: 1.1rem;
+}
+
+#footer a {
+    font-weight: bold;
+    color: var(--light-blue);
+
+}
+
+#footer a:hover {
+    color: var(--orange);
+    cursor: pointer;
 }

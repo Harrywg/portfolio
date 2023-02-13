@@ -720,7 +720,9 @@ let hoverElementTagArray = [
     "#wakatime-logo",
     "#form-submit-button",
     ".section-link",
-    "#footer-link"
+    "#footer-link",
+    ".home_link",
+    "#form-success-button"
 ];
 hoverElementTagArray.forEach((tag)=>{
     let elements = document.querySelectorAll(tag);

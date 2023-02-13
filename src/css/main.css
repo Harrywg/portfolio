@@ -2,7 +2,7 @@ html {}
 
 :root {
   --green: #06252E;
-  --green-translucent: #06252e8e;
+  --green-translucent: #06252ed7;
 
   --dark-green: #061D24;
 
@@ -127,6 +127,7 @@ h2 {
   position: absolute;
   height: 100%;
   width: 100%;
+  z-index: -10;
 }
 
 .sandbox-mode {
@@ -162,6 +163,7 @@ h2 {
   font-family: 'monomaniac-one';
   font-size: 1.5rem;
   transition: 0.1s;
+
 }
 
 #sandbox-return:hover {
@@ -179,23 +181,4 @@ h2 {
 .sandbox-return-active {
   transform: translate(-50%, 0%) !important;
 
-}
-
-#footer p {
-  text-align: center;
-  font-family: nunito-sans;
-  background: var(--green);
-  padding: 1rem;
-  color: white;
-}
-
-#footer a {
-  font-weight: bold;
-  color: var(--light-blue);
-
-}
-
-#footer a:hover {
-  color: var(--orange);
-  cursor: pointer;
 }

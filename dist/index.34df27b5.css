@@ -1,6 +1,6 @@
 :root {
   --green: #06252e;
-  --green-translucent: #06252e8e;
+  --green-translucent: #06252ed7;
   --dark-green: #061d24;
   --dark-green-translucent: #061d24f5;
   --light-blue: #bcffe3;
@@ -110,6 +110,7 @@ h2 {
   pointer-events: none;
   height: 100%;
   width: 100%;
+  z-index: -10;
   position: absolute;
 }
 
@@ -156,24 +157,6 @@ h2 {
 
 .sandbox-return-active {
   transform: translate(-50%) !important;
-}
-
-#footer p {
-  text-align: center;
-  background: var(--green);
-  color: #fff;
-  padding: 1rem;
-  font-family: nunito-sans;
-}
-
-#footer a {
-  color: var(--light-blue);
-  font-weight: bold;
-}
-
-#footer a:hover {
-  color: var(--orange);
-  cursor: pointer;
 }
 
 /*# sourceMappingURL=index.34df27b5.css.map */

@@ -5,6 +5,8 @@
 #projects {
   color: var(--light-blue);
   background: var(--green);
+  max-width: 90rem;
+  margin: auto auto 4rem;
   padding: 4rem 2rem;
   overflow: hidden;
   transform: translateZ(0);
@@ -150,7 +152,7 @@
   height: 600%;
   z-index: -1;
   border-top: 3px solid var(--light-blue);
-  background: var(--dark-green);
+  background: var(--green);
   transition: clip-path 2s;
   position: absolute;
   top: -250%;
@@ -218,9 +220,12 @@
   margin: auto;
   font-family: nunito-sans;
   font-size: 1.5rem;
-  font-weight: bold;
   list-style-type: none;
   display: flex;
+}
+
+.skills-list-heading {
+  font-weight: bold;
 }
 
 .project_info-list {
@@ -252,13 +257,14 @@
 }
 
 .links-card a {
-  width: 4rem;
-  height: 4rem;
-  background: var(--green);
+  width: 5rem;
+  height: 5rem;
+  background: var(--dark-green);
   border-radius: 50%;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
+  gap: 1rem;
   padding: 1rem;
   display: flex;
 }
@@ -266,6 +272,8 @@
 .links-card p {
   color: var(--light-blue);
   text-align: center;
+  white-space: nowrap;
+  font-size: .9rem;
   text-decoration: none;
 }
 
@@ -294,7 +302,7 @@
 
 .project_info-button {
   z-index: 100;
-  background: var(--green);
+  background: var(--dark-green);
   color: var(--light-blue);
   border: 0;
   outline: 0;

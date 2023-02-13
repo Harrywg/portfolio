@@ -16,12 +16,14 @@
 }
 
 #home_header-wrap {
-    padding: 5rem 2rem;
+    padding: 4rem 2rem;
     background: var(--green);
+
     min-width: min(60%, 50rem);
     clip-path: url(#blob);
 
     text-align: center;
+    position: relative;
 }
 
 @media(max-width: 400px) {
@@ -204,4 +206,41 @@
 .section-link:active {
     cursor: pointer;
     color: var(--orange);
+}
+
+.home_link img {
+    width: 1.4rem;
+    filter: invert(10%) sepia(30%) saturate(1028%) hue-rotate(147deg) brightness(89%) contrast(100%);
+}
+
+.home_link {
+    background: var(--light-blue);
+    width: 3.5rem;
+    height: 3.5rem;
+    border-radius: 100%;
+    display: grid;
+    place-items: center;
+}
+
+.home_link:hover {
+    background: var(--orange);
+    cursor: pointer;
+}
+
+#home_links-wrap {
+    position: fixed;
+    display: flex;
+    gap: 1rem;
+    margin: auto;
+    justify-content: center;
+    bottom: 1rem;
+    left: 1rem;
+    z-index: 10;
+}
+
+@media(max-width: 600px) {
+    #home_links-wrap {
+        position: absolute;
+        left: auto;
+    }
 }

@@ -2,7 +2,7 @@
   color: var(--light-blue);
   text-align: center;
   background: var(--green);
-  padding: 4rem 2rem;
+  padding: 4rem 2rem 0;
 }
 
 #contact h2 {
@@ -43,6 +43,7 @@
   gap: 1rem;
   margin: auto;
   display: flex;
+  position: relative;
 }
 
 #contact-form input {
@@ -78,12 +79,66 @@
   padding: 1rem 2rem;
   font-family: monomaniac-one;
   font-size: 1.3rem;
-  transition: color .1s;
+  transition: color .1s, transform .2s, opacity, all .3s;
 }
 
 #form-submit-button:hover {
   cursor: pointer;
   color: var(--orange);
+}
+
+#form-success {
+  height: 100%;
+  width: calc(100% + 1rem);
+  background-color: var(--green);
+  color: var(--light-blue);
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  display: none;
+  position: absolute;
+  top: 0;
+}
+
+#form-success p {
+  color: var(--light-blue);
+  font-size: 1.3rem;
+}
+
+#form-success button {
+  background: var(--dark-green);
+  width: auto;
+  color: var(--light-blue);
+  border: 0;
+  outline: 0;
+  padding: 1rem 2rem;
+  font-family: monomaniac-one;
+  font-size: 1.3rem;
+  transition: color .1s, transform .2s, opacity, all .3s;
+}
+
+#form-success button:hover {
+  cursor: pointer;
+  color: var(--orange);
+}
+
+#footer p {
+  text-align: center;
+  color: #fff;
+  margin: 2rem 0 0;
+  padding: 1rem;
+  font-family: nunito-sans;
+  font-size: 1.1rem;
+}
+
+#footer a {
+  color: var(--light-blue);
+  font-weight: bold;
+}
+
+#footer a:hover {
+  color: var(--orange);
+  cursor: pointer;
 }
 
 /*# sourceMappingURL=index.50f6a0d9.css.map */
