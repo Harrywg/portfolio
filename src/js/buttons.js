@@ -84,6 +84,7 @@ function handleFormSubmit(button) {
         },
         dataType: "json",
         success: (data) => {
+            console.log(data);
             document.getElementById('form-success').style.display = 'flex';
             form.style = '';
             button.style = '';
