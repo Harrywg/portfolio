@@ -235,6 +235,7 @@ document.getElementById('wakatime-info').addEventListener('mouseleave', (e) => {
 
 if (isTouchDevice()) {
     document.getElementById('cursor').style.display = 'none';
+    document.getElementById('home_sandbox-button').style.display = 'none';
     let cursorTrail = Array.from(document.getElementsByClassName('ball'));
     cursorTrail.forEach((ball) => {
         ball.style.opacity = '0'

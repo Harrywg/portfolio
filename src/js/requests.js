@@ -7,7 +7,7 @@ function alterDateFormat(date) {
 }
 $.ajax({
     type: 'GET',
-    url: 'https://wakatime.com/share/@f84fe8f0-b5a8-4518-86b9-369b455d7800/90f718f9-b0a4-4f55-ad92-ffdae330d503.json',
+    url: 'https://wakatime.com/share/@f84fe8f0-b5a8-4518-86b9-369b455d7800/700437ab-859f-49c4-8a6c-8cb5857d3bdb.json',
     dataType: 'jsonp',
     success: function (response) {
         let daysArr = response.data;
