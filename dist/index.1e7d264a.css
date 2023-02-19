@@ -295,27 +295,42 @@
 }
 
 .project_info-button-wrap {
-  max-width: 80rem;
+  max-width: 62rem;
   margin: auto;
   display: block;
 }
 
 .project_info-button {
   z-index: 100;
-  background: var(--dark-green);
-  color: var(--light-blue);
-  border: 0;
+  background: var(--orange);
+  color: var(--dark-green);
+  border: 3px solid #0000;
   outline: 0;
   padding: 1rem 2rem;
   font-family: monomaniac-one;
   font-size: 1.3rem;
+  transition: all .1s;
   display: none;
   position: absolute;
+}
+
+@media (max-width: 800px) {
+  .project_info-button {
+    display: none !important;
+  }
+}
+
+#project_info-button-arrow {
+  font-style: normal;
+  transform: scale(10);
 }
 
 .project_info-button:hover {
   cursor: pointer;
   color: var(--orange);
+  border: 3px solid var(--orange);
+  filter: drop-shadow(0px 0px 10px var(--orange));
+  background: none;
 }
 
 .project_info-button:active {

@@ -345,7 +345,7 @@
 
 .project_info-button-wrap {
     display: block;
-    max-width: 80rem;
+    max-width: 62rem;
     margin: auto;
 }
 
@@ -356,15 +356,32 @@
     font-family: monomaniac-one;
     position: absolute;
     z-index: 100;
-    background: var(--dark-green);
-    color: var(--light-blue);
+    background: var(--orange);
+    color: var(--dark-green);
     padding: 1rem 2rem;
     display: none;
+    border: 3px solid transparent;
+    transition: 0.1s;
+
+}
+
+@media(max-width: 800px) {
+    .project_info-button {
+        display: none !important;
+    }
+}
+
+#project_info-button-arrow {
+    font-style: normal;
+    transform: scale(10);
 }
 
 .project_info-button:hover {
     cursor: pointer;
     color: var(--orange);
+    background: transparent;
+    border: 3px solid var(--orange);
+    filter: drop-shadow(0px 0px 10px var(--orange))
 }
 
 .project_info-button:active {
