@@ -190,20 +190,3 @@ if (isTouchDevice()) {
     Composite.remove(world, mConstraint)
 
 }
-
-
-//no collision if not in landing page
-if (!isTouchDevice()) {
-    console.log("test")
-    document.addEventListener('mousemove', (e) => {
-        if (document.getElementById('page-wrap').classList.length === 0) { //controls is sandbox mode activated
-            if (Array.from(document.elementsFromPoint(e.pageX, e.pageY)).includes(document.getElementById('home'))) {
-                Composite.allBodies(world)[0].collisionFilter.category = 1;
-            }
-            else {
-                Composite.allBodies(world)[0].collisionFilter.category = 0;
-
-            }
-        }
-    })
-}

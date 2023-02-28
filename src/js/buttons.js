@@ -2,12 +2,10 @@ function scrollToSection(elTag) {
     let section = document.querySelector(elTag);
     let rect = section.getBoundingClientRect()
     document.getElementById('main').scrollTo(rect.x, rect.y);
-    console.log({ section: section, rect: rect })
 }
 
 function projectInfo(id) {
     document.querySelector('.project_info-button').style.display = "block";
-
     let project = document.getElementById(id);
     project.style.zIndex = 10;
     project.style.pointerEvents = 'none';

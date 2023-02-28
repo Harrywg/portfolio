@@ -3,7 +3,11 @@
     "gsap": "^3.11.4",
     "jquery": "^3.6.3",
     "matter-js": "^0.18.0",
+<<<<<<< HEAD
     "parcel-bundler": "^1.12.5"
+=======
+    "parcel": "^2.8.3"
+>>>>>>> parent of 9d55b96b (1.2.0 Multiple changes)
   },
   "scripts": {
     "start": "parcel src/index.html",

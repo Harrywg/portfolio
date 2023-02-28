@@ -29,8 +29,7 @@ $.ajax({
 
         let time = document.createElement('p');
         time.id = 'wakatime-date';
-        time.textContent = "Recent coding activity";
-
+        time.textContent = `${startDate} - ${endDate}`;
 
         document.getElementById('wakatime').appendChild(time)
         document.getElementById('wakatime').appendChild(hours)
