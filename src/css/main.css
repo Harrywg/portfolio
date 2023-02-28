@@ -74,7 +74,7 @@ h2 {
   display: none;
   place-items: center;
   overflow: hidden;
-  transition: width 0.2s, height 0.2s;
+  transition: width 0.2s, height 0.2s, opacity 0.3s;
 }
 
 #ball-1 {
@@ -98,7 +98,7 @@ h2 {
 
 
 
-#cursor {
+.cursor {
   pointer-events: none;
   height: 16px;
   width: 16px;
@@ -109,9 +109,15 @@ h2 {
   clip-path: circle();
   z-index: 100;
   transform: translate(-50%, -50%);
-  transition: width 0.2s, height 0.2s, background-color 0.4s;
+  transition: width 0.2s, height 0.2s, background-color 0.4s, transform 1s, opacity 0.3s;
   mix-blend-mode: difference;
   /* display: none; */
+}
+
+.cursor-inactive {
+  opacity: 0 !important;
+  height: 1px;
+  width: 1px
 }
 
 .ball-hover {

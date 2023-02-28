@@ -701,9 +701,23 @@ animateBallTrail1("#ball-3", ballSpeed);
 animateBallTrail2("#ball-4", ballSpeed);
 // Cursor  
 document.addEventListener("mousemove", (e)=>{
-    let cursor = document.getElementById("cursor");
+    let cursor = document.querySelector(".cursor");
     cursor.style.left = `${e.pageX}px`;
     cursor.style.top = `${e.pageY}px`;
+    //invisible if out of landing page
+    if (!isSandbox) {
+        if (!Array.from(document.elementsFromPoint(e.pageX, e.pageY)).includes(document.getElementById("home"))) {
+            document.querySelector(".cursor").classList.add("cursor-inactive");
+            Array.from(document.getElementsByClassName("ball")).forEach((ball)=>{
+                ball.classList.add("cursor-inactive");
+            });
+        } else {
+            document.querySelector(".cursor").classList.remove("cursor-inactive");
+            Array.from(document.getElementsByClassName("ball")).forEach((ball)=>{
+                ball.classList.remove("cursor-inactive");
+            });
+        }
+    }
 });
 // --- CURSOR HOVER ANIMATION
 let hoverElementTagArray = [
@@ -722,20 +736,21 @@ let hoverElementTagArray = [
     ".section-link",
     "#footer-link",
     ".home_link",
-    "#form-success-button"
+    "#form-success-button",
+    ".about-contact-link"
 ];
 hoverElementTagArray.forEach((tag)=>{
     let elements = document.querySelectorAll(tag);
     elements.forEach((el)=>{
         el.addEventListener("mouseover", (e)=>{
-            document.getElementById("cursor").classList.add("cursor-hover");
+            document.querySelector(".cursor").classList.add("cursor-hover");
             let cursorTrail = Array.from(document.getElementsByClassName("ball"));
             cursorTrail.forEach((ball)=>{
                 ball.classList.add("ball-hover");
             });
         });
         el.addEventListener("mouseout", (e)=>{
-            document.getElementById("cursor").classList.remove("cursor-hover");
+            document.querySelector(".cursor").classList.remove("cursor-hover");
             let cursorTrail = Array.from(document.getElementsByClassName("ball"));
             cursorTrail.forEach((ball)=>{
                 ball.classList.remove("ball-hover");
@@ -744,15 +759,18 @@ hoverElementTagArray.forEach((tag)=>{
     });
 });
 // --- SANDBOX ANIMATION
+let isSandbox = false;
 function sandboxOn() {
     document.getElementById("page-wrap").classList.add("sandbox-mode");
     document.getElementById("sandbox-return-wrap").classList.add("sandbox-return-active");
     document.documentElement.style.setProperty("cursor", "none");
+    isSandbox = true;
 }
 function sandboxOff() {
     document.getElementById("page-wrap").classList.remove("sandbox-mode");
     document.getElementById("sandbox-return-wrap").classList.remove("sandbox-return-active");
     document.documentElement.style.setProperty("cursor", "auto");
+    isSandbox = false;
 }
 document.getElementById("home_sandbox-button").onclick = sandboxOn;
 document.getElementById("sandbox-return").onclick = sandboxOff;
@@ -814,7 +832,7 @@ document.getElementById("wakatime-info").addEventListener("mouseleave", (e)=>{
     document.querySelector(".wakatime-info-hover-el").classList.remove("wakatime-info-hover-el-active");
 });
 if (isTouchDevice()) {
-    document.getElementById("cursor").style.display = "none";
+    document.querySelector(".cursor").style.display = "none";
     document.getElementById("home_sandbox-button").style.display = "none";
     let cursorTrail = Array.from(document.getElementsByClassName("ball"));
     cursorTrail.forEach((ball)=>{

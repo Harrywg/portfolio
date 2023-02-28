@@ -3,7 +3,8 @@
     "gsap": "^3.11.4",
     "jquery": "^3.6.3",
     "matter-js": "^0.18.0",
-    "parcel": "^2.8.3"
+    "parcel": "^2.8.3",
+    "parcel-bundler": "^1.12.5"
   },
   "scripts": {
     "start": "parcel src/index.html",

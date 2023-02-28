@@ -711,6 +711,16 @@ if (isTouchDevice()) {
     Composite.remove(world, bodiesArray[0]);
     Composite.remove(world, mConstraint);
 }
+//no collision if not in landing page
+if (!isTouchDevice()) {
+    console.log("test");
+    document.addEventListener("mousemove", (e)=>{
+        if (document.getElementById("page-wrap").classList.length === 0) {
+            if (Array.from(document.elementsFromPoint(e.pageX, e.pageY)).includes(document.getElementById("home"))) Composite.allBodies(world)[0].collisionFilter.category = 1;
+            else Composite.allBodies(world)[0].collisionFilter.category = 0;
+        }
+    });
+}
 
 },{"matter-js":"2oYKU","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"2oYKU":[function(require,module,exports) {
 var global = arguments[3];
