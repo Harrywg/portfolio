@@ -29,7 +29,7 @@ $.ajax({
 
         let time = document.createElement('p');
         time.id = 'wakatime-date';
-        time.textContent = "Recent coding activity";
+        time.textContent = "Recent activity";
 
 
         document.getElementById('wakatime').appendChild(time)

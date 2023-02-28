@@ -73,7 +73,6 @@
     position: relative;
     outline: 0;
     border: 0;
-    cursor: pointer;
 
     background: var(--green);
     pointer-events: none;
@@ -81,6 +80,15 @@
 
 .project * {
     pointer-events: all;
+}
+
+.project p {
+    user-select: text !important;
+}
+
+.project ul {
+    user-select: text !important;
+
 }
 
 .project_info-card {
@@ -205,7 +213,10 @@
     /* border-top: 3px solid var(--light-blue); */
 }
 
-.project_info h2 {}
+.project_info h2 {
+    user-select: text !important;
+
+}
 
 .project_title {
     position: absolute;
@@ -218,7 +229,9 @@
     display: grid;
     place-items: center;
     transition: 0.2s;
-    filter: drop-shadow(3px 3px 10px var(--dark-green))
+    filter: drop-shadow(3px 3px 10px var(--dark-green));
+    cursor: pointer;
+
 }
 
 .project_title h3 {
@@ -229,7 +242,6 @@
     transition: 0.25s;
     padding: 0.5rem 2rem;
     transition-timing-function: linear;
-
 }
 
 .project_title:hover {
