@@ -149,6 +149,7 @@
 }
 
 .project_image-active {
+    transition: 0.2s, filter 1s;
     filter: none !important;
     transform: scale(0.9) !important;
 }
@@ -164,7 +165,7 @@
     background: var(--project-img-overlay);
     mix-blend-mode: darken;
     opacity: 1;
-    transition: 0.2s;
+    transition: 0.5s;
     z-index: 1;
 
 }

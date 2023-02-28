@@ -12,7 +12,7 @@ function projectInfo(id) {
     project.style.zIndex = 10;
     project.style.pointerEvents = 'none';
     project.children[0].classList.add('project_image-active')
-    document.querySelector(':root').style.setProperty('--project-img-overlay', 'transparent')
+    // document.querySelector(':root').style.setProperty('--project-img-overlay', 'transparent')
 
     project.lastElementChild.classList.add('project_info-wrap-active')
 
