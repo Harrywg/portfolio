@@ -130,7 +130,7 @@
   mix-blend-mode: darken;
   opacity: 1;
   z-index: 1;
-  transition: all .5s;
+  transition: all .2s;
   display: block;
   position: absolute;
   top: 0;
@@ -182,7 +182,7 @@
   z-index: 10;
   filter: drop-shadow(3px 3px 10px var(--dark-green));
   place-items: center;
-  transition: all .5s;
+  transition: all .2s;
   display: grid;
   position: absolute;
   top: 0;
@@ -247,6 +247,10 @@
 
 .paragraph-card {
   padding: 1rem;
+}
+
+.paragraph-card-instructions {
+  font-size: 1rem !important;
 }
 
 .links-card {

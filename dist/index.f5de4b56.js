@@ -584,7 +584,7 @@ $.ajax({
         hours.textContent = `${totalHours} hours`;
         let time = document.createElement("p");
         time.id = "wakatime-date";
-        time.textContent = `${startDate} - ${endDate}`;
+        time.textContent = "Recent coding activity";
         document.getElementById("wakatime").appendChild(time);
         document.getElementById("wakatime").appendChild(hours);
     }
