@@ -17,7 +17,7 @@
   min-width: min(60%, 50rem);
   clip-path: url("#blob");
   text-align: center;
-  padding: 6rem 2rem;
+  padding: 4rem 2rem;
   position: relative;
 }
 
@@ -58,6 +58,50 @@
   margin: 1rem 0;
   font-size: clamp(3.2rem, 9vw, 5rem);
   animation: 40s linear infinite header-animation;
+}
+
+#home_download-cv {
+  color: var(--light-blue);
+  max-width: -moz-fit-content;
+  max-width: fit-content;
+  border: 0;
+  outline: 0;
+  justify-content: center;
+  align-items: center;
+  gap: .5rem;
+  margin: 1rem auto 0;
+  padding: 1rem;
+  font-family: monomaniac-one;
+  font-size: 2rem;
+  text-decoration: none;
+  display: flex;
+}
+
+#home_download-cv div {
+  margin-top: -.2rem;
+}
+
+@media (max-width: 600px) {
+  #home_download-cv {
+    font-size: 1.3rem;
+  }
+
+  #home_download-cv-img {
+    width: 1.5rem !important;
+  }
+}
+
+#home_download-cv:hover img {
+  filter: invert(63%) sepia(57%) saturate(3917%) hue-rotate(360deg) brightness(101%) contrast(102%);
+}
+
+#home_download-cv:hover {
+  color: var(--orange);
+}
+
+#home_download-cv-img {
+  width: 2.5rem;
+  filter: invert(89%) sepia(27%) saturate(363%) hue-rotate(88deg) brightness(104%) contrast(101%);
 }
 
 @media (max-width: 500px) {

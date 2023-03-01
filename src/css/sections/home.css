@@ -16,7 +16,7 @@
 }
 
 #home_header-wrap {
-    padding: 6rem 2rem;
+    padding: 4rem 2rem;
     background: var(--green);
 
     min-width: min(60%, 50rem);
@@ -72,6 +72,52 @@
     background-clip: text;
     font-size: clamp(3.2rem, 9vw, 5rem);
     animation: header-animation 40s infinite linear;
+}
+
+#home_download-cv {
+    color: var(--light-blue);
+    font-size: 2rem;
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 1rem;
+    margin-bottom: 0;
+    /* background-color: var(--dark-green); */
+    border: 0;
+    outline: 0;
+    padding: 1rem;
+    font-family: monomaniac-one;
+    max-width: fit-content;
+    text-decoration: none;
+}
+
+#home_download-cv div {
+    margin-top: -0.2rem;
+}
+
+@media(max-width: 600px) {
+    #home_download-cv {
+        font-size: 1.3rem;
+    }
+
+    #home_download-cv-img {
+        width: 1.5rem !important;
+    }
+}
+
+#home_download-cv:hover img {
+    filter: invert(63%) sepia(57%) saturate(3917%) hue-rotate(360deg) brightness(101%) contrast(102%);
+}
+
+#home_download-cv:hover {
+    color: var(--orange);
+}
+
+#home_download-cv-img {
+    width: 2.5rem;
+    filter: invert(89%) sepia(27%) saturate(363%) hue-rotate(88deg) brightness(104%) contrast(101%);
 }
 
 @media(max-width: 500px) {
