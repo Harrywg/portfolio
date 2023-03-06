@@ -737,7 +737,8 @@ let hoverElementTagArray = [
     "#footer-link",
     ".home_link",
     "#form-success-button",
-    ".about-contact-link"
+    ".about-contact-link",
+    "#home_download-cv"
 ];
 hoverElementTagArray.forEach((tag)=>{
     let elements = document.querySelectorAll(tag);
