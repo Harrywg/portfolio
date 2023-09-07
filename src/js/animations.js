@@ -1,6 +1,8 @@
 // DISCLAIMER!!!!
 // - If you're looking through my portfolio to check out my code standard, please check out my most recent projects as this code is now very old and messy.
 
+import "./buttons.js";
+
 import gsap from "gsap";
 function isTouchDevice() {
   return (
