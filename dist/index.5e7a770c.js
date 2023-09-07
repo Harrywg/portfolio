@@ -671,7 +671,6 @@ function newBox() {
 }
 let spawnRate = 1000000 / document.getElementById("main").clientWidth; //control spawn rate depending on device width
 let initSpawn = document.getElementById("main").clientWidth / 40;
-console.log(spawnRate);
 let startBoxes = ()=>setInterval(()=>{
         if (!document.hidden) World.add(world, newBox());
         const bodyLimit = 1000; //maximum amount of boxes
@@ -734,16 +733,13 @@ if (isTouchDevice()) {
     Composite.remove(world, mConstraint);
 }
 //no collision if not in landing page
-if (!isTouchDevice()) {
-    console.log("test");
-    document.addEventListener("mousemove", (e)=>{
-        if (document.getElementById("page-wrap").classList.length === 0) {
-            //controls is sandbox mode activated
-            if (Array.from(document.elementsFromPoint(e.pageX, e.pageY)).includes(document.getElementById("home"))) Composite.allBodies(world)[0].collisionFilter.category = 1;
-            else Composite.allBodies(world)[0].collisionFilter.category = 0;
-        }
-    });
-}
+if (!isTouchDevice()) document.addEventListener("mousemove", (e)=>{
+    if (document.getElementById("page-wrap").classList.length === 0) {
+        //controls is sandbox mode activated
+        if (Array.from(document.elementsFromPoint(e.pageX, e.pageY)).includes(document.getElementById("home"))) Composite.allBodies(world)[0].collisionFilter.category = 1;
+        else Composite.allBodies(world)[0].collisionFilter.category = 0;
+    }
+});
 
 },{"matter-js":"2oYKU","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"2oYKU":[function(require,module,exports) {
 var global = arguments[3];

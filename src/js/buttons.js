@@ -5,7 +5,6 @@ function scrollToSection(elTag) {
   let section = document.querySelector(elTag);
   let rect = section.getBoundingClientRect();
   document.getElementById("main").scrollTo(rect.x, rect.y);
-  console.log({ section: section, rect: rect });
 }
 
 function projectInfo(id) {
@@ -54,10 +53,6 @@ function projectInfoBack(id) {
   });
 }
 
-function test() {
-  console.log("test");
-}
-
 function handleFormSubmit(button) {
   // $.ajax({
   //     url: "https://formsubmit.co/ajax/your@email.com",
@@ -70,7 +65,6 @@ function handleFormSubmit(button) {
   // });
   let form = button.parentElement;
 
-  console.log(form);
   if (
     !form.elements[0].value ||
     !form.elements[1].value ||
@@ -97,7 +91,6 @@ function handleFormSubmit(button) {
     },
     dataType: "json",
     success: (data) => {
-      console.log(data);
       document.getElementById("form-success").style.display = "flex";
       form.style = "";
       button.style = "";

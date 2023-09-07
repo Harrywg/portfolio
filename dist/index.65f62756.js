@@ -4,10 +4,6 @@ function scrollToSection(elTag) {
     let section = document.querySelector(elTag);
     let rect = section.getBoundingClientRect();
     document.getElementById("main").scrollTo(rect.x, rect.y);
-    console.log({
-        section: section,
-        rect: rect
-    });
 }
 function projectInfo(id) {
     document.querySelector(".project_info-button").style.display = "block";
@@ -42,9 +38,6 @@ function projectInfoBack(id) {
         project.children[2].style.transition = "clip-path 2s";
     });
 }
-function test() {
-    console.log("test");
-}
 function handleFormSubmit(button) {
     // $.ajax({
     //     url: "https://formsubmit.co/ajax/your@email.com",
@@ -56,7 +49,6 @@ function handleFormSubmit(button) {
     //     dataType: "json"
     // });
     let form = button.parentElement;
-    console.log(form);
     if (!form.elements[0].value || !form.elements[1].value || !form.elements[2].value || !form.elements[3].value) return;
     form.style.pointerEvents = "none";
     form.style.opacity = "0.75";
@@ -73,7 +65,6 @@ function handleFormSubmit(button) {
         },
         dataType: "json",
         success: (data)=>{
-            console.log(data);
             document.getElementById("form-success").style.display = "flex";
             form.style = "";
             button.style = "";

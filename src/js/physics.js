@@ -134,7 +134,6 @@ function newBox() {
 
 let spawnRate = 1000000 / document.getElementById("main").clientWidth; //control spawn rate depending on device width
 let initSpawn = document.getElementById("main").clientWidth / 40;
-console.log(spawnRate);
 let startBoxes = () =>
   setInterval(() => {
     if (!document.hidden) {
@@ -212,7 +211,6 @@ if (isTouchDevice()) {
 
 //no collision if not in landing page
 if (!isTouchDevice()) {
-  console.log("test");
   document.addEventListener("mousemove", (e) => {
     if (document.getElementById("page-wrap").classList.length === 0) {
       //controls is sandbox mode activated

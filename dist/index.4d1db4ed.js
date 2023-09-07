@@ -840,29 +840,6 @@ function animateAboutTitle() {
     }, animationSpeed);
 }
 animateAboutTitle();
-//--- WAKATIME HOVER INFO
-document.getElementById("wakatime-info").addEventListener("mouseover", (e)=>{
-    let hoverEl = document.querySelector(".wakatime-info-hover-el");
-    let hoverElRect = hoverEl.getBoundingClientRect();
-    let iconRect = document.getElementById("wakatime-info").getBoundingClientRect();
-    hoverEl.classList.add("wakatime-info-hover-el-active");
-    let x = iconRect.x - hoverElRect.width;
-    let y = iconRect.y - hoverElRect.height;
-    hoverEl.style.left = `${x}px`;
-    hoverEl.style.top = `${y}px`;
-});
-document.getElementById("wakatime-info").addEventListener("mouseleave", (e)=>{
-    document.querySelector(".wakatime-info-hover-el").classList.remove("wakatime-info-hover-el-active");
-});
-if (isTouchDevice()) {
-    document.querySelector(".cursor").style.display = "none";
-    document.getElementById("home_sandbox-button").style.display = "none";
-    let cursorTrail = Array.from(document.getElementsByClassName("ball"));
-    cursorTrail.forEach((ball)=>{
-        ball.style.opacity = "0";
-        console.log(ball);
-    });
-}
 
 },{"gsap":"fPSuC","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"fPSuC":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
