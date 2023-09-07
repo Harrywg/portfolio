@@ -9,7 +9,7 @@
   font-size: 2.5rem;
 }
 
-@media (max-width: 500px) {
+@media (width <= 500px) {
   #contact h2 {
     font-size: 2rem;
   }
@@ -36,11 +36,11 @@
 }
 
 #contact-form {
-  width: 100%;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 1rem;
+  width: 100%;
   margin: auto;
   display: flex;
   position: relative;
@@ -49,10 +49,10 @@
 #contact-form input {
   color: var(--light-blue);
   background: var(--dark-green);
-  width: calc(100% - 1rem);
-  height: 1rem;
   border: 0;
   outline: 0;
+  width: calc(100% - 1rem);
+  height: 1rem;
   padding: 1rem;
   font-size: 1.2rem;
 }
@@ -60,11 +60,11 @@
 #contact-form textarea {
   color: var(--light-blue);
   background: var(--dark-green);
-  width: calc(100% - 1rem);
-  height: 10rem;
   resize: none;
   border: 0;
   outline: 0;
+  width: calc(100% - 1rem);
+  height: 10rem;
   padding: 1rem;
   font-family: nunito-sans;
   font-size: 1.2rem;
@@ -72,10 +72,10 @@
 
 #form-submit-button {
   background: var(--dark-green);
-  width: auto;
   color: var(--light-blue);
   border: 0;
   outline: 0;
+  width: auto;
   padding: 1rem 2rem;
   font-family: monomaniac-one;
   font-size: 1.3rem;
@@ -88,13 +88,13 @@
 }
 
 #form-success {
-  height: 100%;
-  width: calc(100% + 1rem);
   background-color: var(--green);
   color: var(--light-blue);
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  width: calc(100% + 1rem);
+  height: 100%;
   display: none;
   position: absolute;
   top: 0;
@@ -107,10 +107,10 @@
 
 #form-success button {
   background: var(--dark-green);
-  width: auto;
   color: var(--light-blue);
   border: 0;
   outline: 0;
+  width: auto;
   padding: 1rem 2rem;
   font-family: monomaniac-one;
   font-size: 1.3rem;

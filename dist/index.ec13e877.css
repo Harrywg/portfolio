@@ -24,7 +24,7 @@
   cursor: pointer;
 }
 
-@media (max-width: 500px) {
+@media (width <= 500px) {
   #about h2 {
     font-size: 2rem;
   }
@@ -58,13 +58,13 @@
   font-weight: normal;
 }
 
-@media (max-width: 1300px) {
+@media (width <= 1300px) {
   #about-description-wrap {
     padding: 4rem;
   }
 }
 
-@media (max-width: 1000px) {
+@media (width <= 1000px) {
   #about-description-wrap {
     flex-direction: column;
     padding: 2rem;
@@ -75,7 +75,7 @@
   }
 }
 
-@media (max-width: 500px) {
+@media (width <= 500px) {
   #about-description-wrap {
     padding: 2rem 1rem;
   }
@@ -109,10 +109,10 @@
 }
 
 #about-description-image {
-  width: 15rem;
-  aspect-ratio: 1 / 1;
+  aspect-ratio: 1;
   object-fit: cover;
   border: 3px solid var(--light-blue);
+  width: 15rem;
   margin: 0 auto;
   display: block;
 }
@@ -141,10 +141,10 @@
 
 #wakatime-wrap {
   background: var(--dark-green);
-  width: 13rem;
   justify-content: center;
   align-items: center;
   gap: 1rem;
+  width: 13rem;
   margin: 0 auto;
   padding: calc(1rem + 3px);
   display: flex;
@@ -164,9 +164,9 @@
 }
 
 #wakatime-logo {
+  filter: invert(89%) sepia(27%) saturate(363%) hue-rotate(88deg) brightness(104%) contrast(101%);
   width: 3rem;
   height: 3rem;
-  filter: invert(89%) sepia(27%) saturate(363%) hue-rotate(88deg) brightness(104%) contrast(101%);
 }
 
 #wakatime-logo:hover {
@@ -175,9 +175,9 @@
 }
 
 #wakatime-info {
+  filter: invert(89%) sepia(27%) saturate(363%) hue-rotate(88deg) brightness(104%) contrast(101%);
   width: 1.4rem;
   height: 1.4rem;
-  filter: invert(89%) sepia(27%) saturate(363%) hue-rotate(88deg) brightness(104%) contrast(101%);
 }
 
 #wakatime-info:hover {
@@ -189,10 +189,10 @@
   opacity: 0;
   background: var(--orange);
   color: #fff;
-  max-width: 20rem;
   z-index: 10000;
   pointer-events: none;
   border-radius: 1rem 1rem 0;
+  max-width: 20rem;
   padding: 1rem;
   font-family: nunito-sans;
   transition: opacity .3s;
@@ -244,11 +244,11 @@
 .skill-wrap {
   background: var(--green);
   border: 3px solid var(--light-blue);
-  width: 8rem;
   filter: drop-shadow(2px 2px 10px var(--dark-green));
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  width: 8rem;
   padding: 2rem;
   display: flex;
   position: relative;
@@ -259,16 +259,16 @@
   display: none;
 }
 
-@media (max-width: 900px) {
+@media (width <= 900px) {
   #skills-logo-wrap {
     gap: 1rem;
   }
 }
 
-@media (max-width: 700px) {
+@media (width <= 700px) {
   .skill-wrap {
-    height: 4rem;
     width: 5rem;
+    height: 4rem;
     padding: 1rem;
   }
 
@@ -281,7 +281,7 @@
   }
 }
 
-@media (max-width: 500px) {
+@media (width <= 500px) {
   #skills-logo-wrap {
     flex-wrap: wrap;
   }
@@ -314,19 +314,19 @@
 }
 
 #secondary-skills-logo-wrap {
-  max-width: 45rem;
   gap: 4rem;
+  max-width: 45rem;
   margin: auto;
   padding: 0 2rem;
 }
 
 #secondary-skills-logo-wrap ul {
   color: var(--dark-green);
-  width: -moz-fit-content;
-  width: fit-content;
   flex-wrap: wrap;
   justify-content: center;
   gap: 1rem;
+  width: -moz-fit-content;
+  width: fit-content;
   font-family: nunito-sans;
   font-size: 1.2rem;
   list-style-type: none;

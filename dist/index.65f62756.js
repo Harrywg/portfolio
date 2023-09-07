@@ -1,3 +1,5 @@
+// DISCLAIMER!!!!
+// - If you're looking through my portfolio to check out my code standard, please check out my most recent projects as this code is now very old and messy.
 function scrollToSection(elTag) {
     let section = document.querySelector(elTag);
     let rect = section.getBoundingClientRect();

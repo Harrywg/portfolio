@@ -1,28 +1,32 @@
-html {}
+html {
+}
 
 :root {
-  --green: #06252E;
+  --green: #06252e;
   --green-translucent: #06252ed7;
-
-  --dark-green: #061D24;
-
+  --dark-green: #061d24;
   --dark-green-translucent: #061d24f5;
-  --light-blue: #BCFFE3;
+  --light-blue: #bcffe3;
   --light-blue-translucent: #bcffe3b7;
-  --orange: #FF8A00;
+  --orange: #ff8a00;
 }
 
 * {
   margin: 0;
   padding: 0;
-  /* cursor: none !important; */
+  box-sizing: border-box;
+}
+
+.hide-cursor {
+  cursor: none !important;
 }
 
 body {
   margin: 0;
-  font-family: 'monomaniac-one';
+  font-family: nunito-sans;
   overflow: hidden;
   background-color: var(--dark-green);
+  color: white;
 }
 
 h1 {
@@ -30,9 +34,6 @@ h1 {
   padding: 0;
   font-size: 3rem;
   font-weight: 400;
-}
-
-h2 {
   font-family: kumbh-sans;
   font-weight: 800;
 }
@@ -55,11 +56,8 @@ h2 {
   width: 100vw;
   z-index: 0;
   opacity: 1;
-  transition: opacity 0.5s;
+  transition: opacity 0.3s;
 }
-
-
-
 
 .ball {
   width: 50px;
@@ -96,8 +94,6 @@ h2 {
   opacity: 0.2;
 }
 
-
-
 .cursor {
   pointer-events: none;
   height: 16px;
@@ -109,7 +105,8 @@ h2 {
   clip-path: circle();
   z-index: 100;
   transform: translate(-50%, -50%);
-  transition: width 0.2s, height 0.2s, background-color 0.4s, transform 1s, opacity 0.3s;
+  transition: width 0.2s, height 0.2s, background-color 0.4s, transform 1s,
+    opacity 0.3s;
   mix-blend-mode: difference;
   /* display: none; */
 }
@@ -117,7 +114,7 @@ h2 {
 .cursor-inactive {
   opacity: 0 !important;
   height: 1px;
-  width: 1px
+  width: 1px;
 }
 
 .ball-hover {
@@ -125,15 +122,17 @@ h2 {
   height: 90px;
 }
 
-.cursor-hover {}
-
-
 #physics-engine-wrap {
   pointer-events: none;
   position: absolute;
   height: 100%;
   width: 100%;
   z-index: -10;
+  transition: opacity 0.1s;
+}
+
+.less-opacity {
+  opacity: 0.7;
 }
 
 .sandbox-mode {
@@ -142,7 +141,6 @@ h2 {
 
 .sandbox-mode * {
   pointer-events: none !important;
-
 }
 
 #sandbox-return-wrap {
@@ -150,41 +148,35 @@ h2 {
   bottom: 0;
   left: 50%;
   transform: translate(-50%, 100%);
-  height: 6rem;
-  width: 15rem;
   display: grid;
   place-items: center;
   background: var(--green);
-  transition: 0.3s;
-  transition-timing-function: ease-in;
+  transition: 0.1s;
   pointer-events: all;
 }
 
 #sandbox-return {
-
-  background: none;
   outline: none;
   border: none;
   color: var(--light-blue);
-  font-family: 'monomaniac-one';
+  font-family: "monomaniac-one";
   font-size: 1.5rem;
   transition: 0.1s;
-
+  background: var(--green);
+  padding: 2rem 4rem;
+  border: 1px solid var(--light-blue);
 }
 
 #sandbox-return:hover {
-
   color: var(--orange);
   cursor: pointer;
-
+  border-color: var(--orange);
 }
 
 #sandbox-return:active {
-
-  transform: scale(0.9)
+  transform: scale(0.9);
 }
 
 .sandbox-return-active {
   transform: translate(-50%, 0%) !important;
-
 }

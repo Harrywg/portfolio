@@ -2,11 +2,13 @@
   "dependencies": {
     "gsap": "^3.11.4",
     "jquery": "^3.6.3",
-    "matter-js": "^0.18.0",
-    "parcel": "^2.8.3"
+    "matter-js": "^0.18.0"
   },
   "scripts": {
     "start": "parcel src/index.html",
     "build": "parcel build src/index.html"
+  },
+  "devDependencies": {
+    "parcel": "^2.9.3"
   }
 }
