@@ -28,7 +28,7 @@
     <link rel="stylesheet" href="./css/contact.css" />
     <link rel="stylesheet" href="./css/about.css" />
     <link rel="stylesheet" href="./fonts/fonts.css" />
-    <script src="./js/buttons.js"></script>
+    <script defer src="./js/buttons.js"></script>
     <script defer src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
     <script defer type="module" src="./js/animations.js"></script>
     <script defer type="module" src="./js/physics.js"></script>
@@ -59,13 +59,13 @@
       <main id="main">
         <section id="home">
           <nav id="home_sidebar-wrap">
-            <a class="section-link" onclick="scrollToSection('#projects')"
+            <a class="section-link" name="projects" onclick="scrollToSection()"
               >Projects</a
             >
-            <a class="section-link" onclick="scrollToSection('#about')"
+            <a class="section-link" name="about" onclick="scrollToSection()"
               >About</a
             >
-            <a class="section-link" onclick="scrollToSection('#contact')"
+            <a class="section-link" name="contact" onclick="scrollToSection()"
               >Contact</a
             >
           </nav>
