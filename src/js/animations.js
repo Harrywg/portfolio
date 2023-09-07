@@ -239,3 +239,13 @@ function animateAboutTitle() {
   }, animationSpeed);
 }
 animateAboutTitle();
+
+if (isTouchDevice()) {
+  document.querySelector(".cursor").style.display = "none";
+  document.getElementById("home_sandbox-button").style.display = "none";
+  let cursorTrail = Array.from(document.getElementsByClassName("ball"));
+  cursorTrail.forEach((ball) => {
+    ball.style.opacity = "0";
+    console.log(ball);
+  });
+}

@@ -840,6 +840,15 @@ function animateAboutTitle() {
     }, animationSpeed);
 }
 animateAboutTitle();
+if (isTouchDevice()) {
+    document.querySelector(".cursor").style.display = "none";
+    document.getElementById("home_sandbox-button").style.display = "none";
+    let cursorTrail = Array.from(document.getElementsByClassName("ball"));
+    cursorTrail.forEach((ball)=>{
+        ball.style.opacity = "0";
+        console.log(ball);
+    });
+}
 
 },{"gsap":"fPSuC","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"fPSuC":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
