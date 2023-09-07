@@ -10,8 +10,9 @@ function scrollToSection(e) {
 const sectionLinks = document.getElementsByClassName("section-link");
 Array.from(sectionLinks).forEach((link) => (link.onclick = scrollToSection));
 
-function handleFormSubmit(button) {
-  let form = button.parentElement;
+function handleFormSubmit(e) {
+  let button = e.target;
+  let form = e.target.form;
 
   if (
     !form.elements[0].value ||
@@ -54,6 +55,13 @@ function handleFormSubmit(button) {
   });
 }
 
-function formSuccessBack(button) {
+const submitButton = document.getElementById("form-submit-button");
+submitButton.onclick = handleFormSubmit;
+
+function formSuccessBack(e) {
+  const button = e.target;
   button.parentElement.style.display = "none";
 }
+
+const backButton = document.getElementById("form-success-button");
+backButton.onclick = formSuccessBack;
