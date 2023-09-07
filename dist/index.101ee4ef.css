@@ -64,7 +64,6 @@ h2 {
 @media (width <= 700px) {
   h2 {
     text-align: center;
-    font-size: 2rem;
   }
 }
 
